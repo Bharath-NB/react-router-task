@@ -1,0 +1,171 @@
+body, h1, h2, h3, p, a, img, input, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.App {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.navbar-left, .navbar-middle, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+.search-bar {
+  padding: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.course {
+  margin: 20px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.course h3 {
+  margin-top: 10px;
+}
+
+.course a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+.course-content {
+  text-align: left;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.course-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px; 
+  }
+
+  .navbar-left, .navbar-middle, .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+
+  .course-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course {
+    margin: 20px 0;
+  }
+
+  .search-bar {
+    width: calc(100% - 40px); 
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search-bar {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .course {
+    width: 90%;
+  }
+
+  .course img {
+    width: 100%;
+    height: auto;
+  }
+
+  .logout-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
